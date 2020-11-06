@@ -1,5 +1,2 @@
-*.db
-*.db-journal
-__pycache__
 .vscode
 token
