@@ -63,6 +63,7 @@ async def _8ball(ctx, *, question=""):
 
 ## Clear the chat
 @bot.command()
+@commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount=5):
     if amount == 0:
         await ctx.send("dont be silly")
@@ -72,6 +73,7 @@ async def clear(ctx, amount=5):
 
 ## Kick Users
 @bot.command()
+@commands.has_role('moderator')
 async def kick(ctx, member : discord.Member, *, reason=None):
     await member.kick(reason=reason)
     await ctx.send(f"Banned {member.mention}. Reason: {reason}")
@@ -79,6 +81,7 @@ async def kick(ctx, member : discord.Member, *, reason=None):
 
 ## Ban Users
 @bot.command()
+@commands.has_role('moderator')
 async def ban(ctx, member : discord.Member, *, reason=None):
     await member.ban(reason=reason)
     await ctx.send(f"Banned {member.mention}. Reason: {reason}")
@@ -86,6 +89,7 @@ async def ban(ctx, member : discord.Member, *, reason=None):
 
 ## Unban Users
 @bot.command()
+@commands.has_role('moderator')
 async def unban(ctx, *, member):
     bannedUsers = await ctx.guild.bans()
     memberName, memberdiscriminator = member.split('#')
