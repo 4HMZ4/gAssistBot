@@ -13,16 +13,17 @@ eg:
 
 ## Features
 ### This bot has basic moderation features
-- Clear Chat
-- kick
-- ban 
-- unban
+- Clear chat
+- kick members
+- ban members
+- unban members
+- modify nicknames
 
 ### There are also some **FUN** features
 - 8Ball
   - You can also use the :8ball: emoji to initiate the command
 - ping
-  - Returns pong as well as the ping of the server
+  - Returns pong as well as the ping of the server also allowing you to use the :ping_pong: emoji
 
 
 ### Dont worry more will be coming.

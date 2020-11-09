@@ -25,6 +25,7 @@ bot = commands.Bot(command_prefix='g.', intents=intents)
 @bot.event
 async def on_ready():
     print('Script successfully logged in')
+    await bot.change_presence(activity=discord.Game(name="With your feelings"))
 
 
 ## Checks to see if a member has joined the guild
@@ -43,8 +44,7 @@ async def on_member_remove(member):
 #### Fun Stuff
 ########################################################
 
-
-@bot.command()
+@bot.command(aliases=['🏓'])
 async def ping(ctx):
     await ctx.send(f":ping_pong: Pong! {round(bot.latency * 1000)}ms")
 
@@ -102,13 +102,17 @@ async def unban(ctx, *, member):
             await ctx.send(f"Unbanned {user.mention}")
             return
 
+@bot.command()
+async def nick(ctx, member : discord.Member, *, nickname):
+    await member.edit(nick=nickname)
+    await ctx.send(f"Nickname changed for {member.mention}")
+
 
 ########################################################
 #### Cogs
 ########################################################
 
 # Need to work on cogs
- 
 
 bot.run(token())
 
