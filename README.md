@@ -23,7 +23,7 @@ eg:
 - 8Ball
   - You can also use the :8ball: emoji to initiate the command
 - ping
-  - Returns pong as well as the ping of the server also allowing you to use the :ping_pong: emoji
+  - Returns pong as well as the ping of the server. This also allows you to use the :ping_pong: emoji
 
 
 ### Dont worry more will be coming.
