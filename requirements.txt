@@ -1,0 +1,4 @@
+aiohttp
+multidict
+yarl
+discord.py
